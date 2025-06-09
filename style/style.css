@@ -6,7 +6,15 @@
     --text-color: #ffffff;
     --light-gray-text: #cccccc;
     --logo-triangle-size: 25px;
-    
+
+    --aside-bg-color: #f0f0f0; /* Світло-сірий фон для aside */
+    --item-bg-color: #ffffff; /* Білий фон для елемента замовлення */
+    --border-color: #e0e0e0; /* Колір бордера для розділення */
+    --dark-text-color: #333333; /* Темний текст для aside */
+    --red-button-color: #e74c3c; /* Червоний колір для кнопки мінус */
+    --green-button-color: #2ecc71; /* Зелений колір для кнопки плюс */
+    --gray-button-color: #cccccc; /* Сірий колір для кнопки х */
+    --icon-color: #666666; /* Колір іконок */
 }
 
 body {
@@ -175,4 +183,167 @@ header {
 aside {
     box-sizing: border-box;
     flex-basis: var(--aside-width);
+    background-color: var(--item-bg-color); 
+    display: flex; /* Використовуємо flexbox для компонування вмісту сайдбару */
+    flex-direction: column; /* Елементи розташовані в стовпець */
+    border-left: 1px solid var(--border-color);
+}
+
+.order-summary {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    gap: 10px; /* Відступ між елементами */
+}
+
+.order-summary h2 {
+    font-size: 1.2rem;
+    color: var(--dark-text-color);
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.order-count {
+    display: inline-flex; /* Щоб padding застосовувався правильно */
+    align-items: center;
+    justify-content: center;
+    background-color: var(--orange-color);
+    color: var(--text-color);
+    border-radius: 50%; /* Кругла форма */
+    padding: 5px 8px;
+    font-size: 0.8rem;
+}
+
+.clear-order-button {
+    background: none;
+    border: none;
+    color: var(--light-gray-text); /* Світло-сірий текст */
+    cursor: pointer;
+    font-size: 0.5rem;
+}
+
+.order-list {
+    background-color: var(--light-gray-text);
+    padding-left: 15px;
+    list-style: none;
+    margin: 0;
+    flex-grow: 1; /* Дозволяє списку займати весь доступний простір */
+    overflow-y: auto; /* Якщо список буде великим, з'явиться скрол */
+}
+
+.order-item {
+    padding: 10px 0px;
+    display: flex; /* Flexbox для компонування елементів всередині товару */
+    align-items: flex-start; /* Вирівнювання елементів по верху */
+    gap: 15px; /* Відступ між елементами */
+    position: relative; /* Для позиціонування зображення піци */
+    overflow: hidden;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1; /* Дозволяє деталям займати доступний простір */
+}
+
+.item-name {
+    margin: 0;
+    color: var(--orange-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.item-attributes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--icon-color); /* Сірий колір для тексту атрибутів */
+    font-size: 0.8rem;
+}
+
+.item-attributes img {
+    height: 12px; /* Розмір іконки */
+    width: 12px;
+    vertical-align: middle;
+}
+
+.item-price {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--dark-text-color);
+}
+
+.item-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-button {
+    color: var(--text-color);
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.quantity-button.plus {
+    background-color: var(--green-button-color); /* Зелений для плюс */
+}
+
+.quantity-button.minus {
+    background-color: var(--red-button-color); /* Червоний для мінус */
+}
+
+.quantity-button:hover {
+    opacity: 0.8;
+}
+
+.item-quantity {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--dark-text-color);
+}
+
+.remove-item-button {
+    background-color: var(--item-bg-color); /* Сірий для х */
+    color: var(--orange-color);
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.remove-item-button:hover {
+    background-color: #b0b0b0;
+}
+
+.item-image {
+    width: 80px; /* Розмір зображення піци */
+    height: 80px;
+    border-radius: 50%; /* Кругла форма */
+    object-fit: cover; /* Обрізає зображення, щоб воно помістилося */
+    position: absolute; /* Абсолютне позиціонування */
+    right: -40px; /* З правого краю */
+    top: 12%; /* По центру по вертикалі */
+    box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Тінь */
 }
