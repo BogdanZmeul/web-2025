@@ -2,12 +2,13 @@
     --main-width: 80%;
     --aside-width: 20%;
     --header-bg-color: rgba(0, 0, 0, 0.8);
+    --main-color: rgb(255 255 245);
     --orange-color: #f7931e;
     --text-color: #ffffff;
     --light-gray-text: #cccccc;
     --logo-triangle-size: 25px;
 
-    --aside-bg-color: #ffffff;
+    --aside-bg-color: rgb(245 245 245);
     /* Світло-сірий фон для aside */
     --item-bg-color: #ffffff;
     /* Білий фон для елемента замовлення */
@@ -36,7 +37,7 @@ body {
 
 main {
     flex-basis: var(--main-width);
-    background-color: #f8f9fa;
+    background-color: var(--main-color);
 }
 
 ul {
@@ -216,8 +217,10 @@ aside {
     border-left: 1px solid var(--border-color);
     flex-shrink: 0;
     position: sticky;
-    top: 0; /* Прилипає до верху вікна перегляду */
-    height: 100vh; /* Займає всю висоту екрану */
+    top: 0;
+    /* Прилипає до верху вікна перегляду */
+    height: 100vh;
+    /* Займає всю висоту екрану */
 }
 
 .order.summary {
@@ -226,6 +229,7 @@ aside {
     justify-content: space-between;
     align-items: center;
     padding: 18px 10px;
+    background-color: white;
 }
 
 .order.summary h2 {
@@ -259,8 +263,7 @@ aside {
 }
 
 .order.list {
-    background-color: var(--light-gray-text);
-    padding-left: 15px;
+    background-color: var(--aside-bg-color);
     list-style: none;
     margin: 0;
     flex-grow: 1;
@@ -270,7 +273,7 @@ aside {
 }
 
 .order.item {
-    padding: 10px 0px;
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     /* Flexbox для компонування елементів всередині товару */
     align-items: flex-start;
@@ -283,6 +286,8 @@ aside {
 }
 
 .item.details {
+    padding: 10px 0px;
+    padding-left: 15px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -414,7 +419,7 @@ aside {
     /* 15px */
     border-top: 1px solid var(--border-color);
     /* 1px */
-    background-color: var(--aside-bg-color);
+    background-color: white;
     /* Фон як у aside */
     gap: 15px;
     /* 15px відступу між елементами */
