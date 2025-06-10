@@ -70,7 +70,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.694);
 }
 
 .logo-container {
@@ -182,30 +182,85 @@ header {
     background-color: darken(var(--orange-color), 1%);
 }
 
-.main-nav {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+.header-nav {
     flex-grow: 1;
     display: flex;
     align-items: center;
 }
 
-.nav-links {
+.header-nav.links {
     display: flex;
     list-style: none;
     flex-grow: 1;
 }
 
-.nav-links li a {
+.header-nav.links li a {
     text-decoration: none;
     color: var(--text-color);
     display: flex;
     transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
+.header-nav.links li a:hover {
     color: var(--orange-color);
 }
 
+.page-title h1{
+    display: flex;
+    box-sizing: border-box;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+.page-nav {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.page-nav.links {
+    list-style: none; 
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-nav.links li {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.page-nav.links li a {
+    text-decoration: none;
+    color: var(--orange-color);
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.page-nav.links li.active a {
+    background-color: var(--orange-color);
+    color: var(--text-color);
+}
+
+.page-nav.links li a:not(.active):hover {
+    color: var(--text-color);
+    background-color: var(--orange-color);
+}
+
+.page-nav.links li.active a:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Aside Styles */
 aside {
     box-sizing: border-box;
     flex-basis: var(--aside-width);
@@ -249,7 +304,7 @@ aside {
     color: var(--text-color);
     border-radius: 50%;
     /* Кругла форма */
-    padding: 5px 8px;
+    padding: 4px 8px;
     font-size: 0.8rem;
 }
 
