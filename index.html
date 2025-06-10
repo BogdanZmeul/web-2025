@@ -35,30 +35,69 @@
     </main>
 
     <aside>
-        <section class="order-summary">
-            <h2>Замовлення</h2> <span class="order-count">3</span>
-            <button class="clear-order-button">Очистити замовлення</button>
+        <section class="order summary">
+            <h2>Замовлення</h2> <span class="order count">3</span>
+            <button class="btn clear-order">Очистити замовлення</button>
         </section>
 
-        <ul class="order-list">
-            <li class="order-item">
-                <div class="item-details">
-                    <h3 class="item-name">BBQ (Мала)</h3>
-                    <div class="item-attributes">
+        <ul class="order list">
+            <li class="order item">
+                <div class="item details">
+                    <h3 class="item name">BBQ (Мала)</h3>
+                    <div class="item attributes">
                         <img src="images/size-icon.svg" alt="Розмір піци"> 30
                         <img src="images/weight.svg" alt="Вага піци"> 460
                     </div>
-                    <div class="item-controls">
-                        <span class="item-price">556грн</span>
-                        <button class="quantity-button minus">-</button>
-                        <span class="item-quantity">4</span>
-                        <button class="quantity-button plus">+</button>
-                        <button class="remove-item-button">x</button>
+                    <div class="item controls">
+                        <span class="item price">556грн</span>
+                        <button class="btn quantity minus">-</button>
+                        <span class="item quantity">4</span>
+                        <button class="btn quantity plus">+</button>
+                        <button class="btn remove-item">x</button>
                     </div>
                 </div>
-                <img src="images/pizza_2.jpg" alt="Піца BBQ" class="item-image">
+                <img src="images/pizza_2.jpg" alt="Піца BBQ" class="item image">
+            </li>
+            <li class="order item">
+                <div class="item details">
+                    <h3 class="item name">Россо Густо (Мала)</h3>
+                    <div class="item attributes">
+                        <img src="images/size-icon.svg" alt="Розмір піци"> 30
+                        <img src="images/weight.svg" alt="Вага піци"> 400
+                    </div>
+                    <div class="item controls">
+                        <span class="item price">189грн</span>
+                        <button class="btn quantity minus">-</button>
+                        <span class="item quantity">1</span>
+                        <button class="btn quantity plus">+</button>
+                        <button class="btn remove-item">x</button>
+                    </div>
+                </div>
+                <img src="images/pizza_4.jpg" alt="Піца BBQ" class="item image">
+            </li>
+            <li class="order item">
+                <div class="item details">
+                    <h3 class="item name">Міксовий поло (Велика)</h3>
+                    <div class="item attributes">
+                        <img src="images/size-icon.svg" alt="Розмір піци"> 40
+                        <img src="images/weight.svg" alt="Вага піци"> 780
+                    </div>
+                    <div class="item controls">
+                        <span class="item price">179грн</span>
+                        <button class="btn quantity minus">-</button>
+                        <span class="item quantity">1</span>
+                        <button class="btn quantity plus">+</button>
+                        <button class="btn remove-item">x</button>
+                    </div>
+                </div>
+                <img src="images/pizza_1.jpg" alt="Піца BBQ" class="item image">
             </li>
         </ul>
+
+        <section class="order total">
+            <p>Сума замовлення  <span class="total-amount">924 грн</span></p>
+            <button class="btn order">Замовити</button>
+        </section>
 
     </aside>
 </body>
