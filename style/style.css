@@ -277,6 +277,9 @@ header {
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template: auto 1fr / 1fr;
 }
 
 .pizza-card:hover {
@@ -317,6 +320,9 @@ header {
 
 .pizza-card-content {
     padding: 20px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template: auto auto 1fr auto / 1fr;
 }
 
 .pizza-category {
@@ -335,7 +341,6 @@ header {
 .pizza-description {
     color: var(--dark-text-color);
     font-size: 0.9rem;
-    line-height: 1.4;
     margin: 3px 0 5px 0;
 }
 
@@ -373,12 +378,14 @@ header {
 }
 
 .pizza-price {
+    margin-top: 20px;
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--dark-text-color);
 }
 
 .pizza-price.currency {
+    margin-top: 0px;
     font-size: 1rem;
     margin-bottom: 5px;
     font-weight: normal;
