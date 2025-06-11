@@ -264,9 +264,9 @@ header {
 .pizza-container {
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -322,29 +322,26 @@ header {
 .pizza-category {
     color: var(--icon-color);
     font-size: 0.85rem;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    margin: 5px 0 0px 0;
 }
 
 .pizza-title {
     color: var(--orange-color);
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 0 0 12px 0;
+    margin: 0;
 }
 
 .pizza-description {
     color: var(--dark-text-color);
     font-size: 0.9rem;
     line-height: 1.4;
-    margin-bottom: 16px;
+    margin: 3px 0 5px 0;
 }
 
 .pizza-sizes {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
 .pizza-size-option {
@@ -379,20 +376,24 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--dark-text-color);
-    margin-bottom: 12px;
+}
+
+.pizza-price.currency {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: normal;
 }
 
 .pizza-buy-button {
     background-color: var(--orange-color);
     color: white;
     border: none;
-    border-radius: 6px;
-    padding: 8px 16px;
+    border-radius: 3px;
+    padding: 8px 10px;
     font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%;
 }
 
 .pizza-buy-button:hover {
