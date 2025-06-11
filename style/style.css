@@ -3,7 +3,7 @@
     --aside-width: 20%;
     --header-bg-color: rgba(0, 0, 0, 0.8);
     --main-color: rgb(255 255 245);
-    --orange-color: #f7931e;
+    --orange-color: #ea862e;
     --text-color: #ffffff;
     --light-gray-text: #cccccc;
     --logo-triangle-size: 25px;
@@ -99,40 +99,12 @@ header {
     /* ЗМІНЕНО: Центруємо текст по горизонталі */
 }
 
-.logo-container::before,
-.logo-container::after {
-    content: '';
+.logo-container img {
     position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    z-index: 1;
-    margin-bottom: 1px;
-    /* Щоб трикутники були під текстом лого */
-}
-
-.logo-container::before {
-    border-width: var(--logo-triangle-size) var(--logo-triangle-size) 0 0;
-    /* Розмір трикутника */
-    border-color: var(--orange-color) transparent transparent transparent;
-    bottom: calc(-1 * var(--logo-triangle-size));
-    /* ЗМІНЕНО: Розміщуємо трикутник рівно під нижньою межею */
-    left: 0;
-    transform: rotate(0deg);
-    /* ЗМІНЕНО: Повернутий, щоб вказував вниз-ліворуч */
-    transform-origin: top left;
-}
-
-.logo-container::after {
-    border-width: var(--logo-triangle-size) 0 0 var(--logo-triangle-size);
-    /* Розмір трикутника */
-    border-color: var(--orange-color) transparent transparent transparent;
-    bottom: calc(-1 * var(--logo-triangle-size));
-    /* ЗМІНЕНО: Розміщуємо трикутник рівно під нижньою межею */
-    right: 0;
-    transform: rotate(0deg);
-    /* ЗМІНЕНО: Повернутий, щоб вказував вниз-праворуч */
-    transform-origin: top right;
+    top: 61px;
+    left: 0px;
+    width: 85px;
+    transform: rotate(180deg);
 }
 
 .logo-text-pizza {
@@ -410,6 +382,60 @@ header {
 
 .pizza-buy-button:active {
     transform: translateY(0);
+}
+
+/* Discount Banner Styles */
+.discount-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--orange-color);
+    color: var(--text-color);
+    position: fixed;
+    width: 85px;
+    height: 100px;
+    bottom: 0px;
+    left: 10px;
+}
+
+.discount-banner img {
+    width: 100%;
+    /* Зображення займає всю ширину банера */
+    height: auto;
+    /* Зберігаємо пропорції */
+    margin-top: -9px;
+    margin-bottom: 15px;
+}
+
+.discount-content p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Центрує текстові параграфи всередині цієї обгортки */
+    justify-content: center;
+    /* Центрує їх по вертикалі всередині обгортки, якщо є вільне місце */
+    width: 100%;
+    /* Щоб контент займав всю ширину батьківського .discount-banner */
+    text-transform: uppercase;
+    /* Перетворюємо весь текст на великі літери */
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.discount-content .line {
+    width: 130%; /* Ширина лінії */
+    height: 0.5px;
+    background-color:rgba(0, 0, 0, 0.5);
+    margin: 4px 0px 8px 0px; /* Відступи навколо лінії */
+    transform: translateX(-10%);
+}
+
+.discount-content p:last-child {
+    font-size: 0.9rem;
 }
 
 /* Aside Styles */
