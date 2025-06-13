@@ -54,7 +54,6 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
-    /* Прилипає до верху вікна перегляду */
     z-index: 1;
 }
 
@@ -83,20 +82,12 @@ header {
     font-weight: bold;
     text-align: center;
     position: relative;
-    /* ЗМІНЕНО: Знову встановлюємо relative, бо трикутники будуть дочірніми елементами */
     z-index: 2;
-    /* ЗМІНЕНО: Щоб логотип був над трикутниками та іншим контентом */
-    /* margin-right: 20px; - ЗМІНЕНО: Видаляємо, оскільки logo-container тепер є прямим flex-елементом header */
     height: 100%;
-    /* ЗМІНЕНО: Щоб логотип займав всю висоту header */
     box-sizing: border-box;
-    /* ЗМІНЕНО: Забезпечуємо правильне врахування padding */
     display: flex;
-    /* ЗМІНЕНО: Використовуємо flex для центрування тексту всередині логотипу */
     align-items: center;
-    /* ЗМІНЕНО: Центруємо текст по вертикалі */
     justify-content: center;
-    /* ЗМІНЕНО: Центруємо текст по горизонталі */
 }
 
 .logo-container img {
@@ -401,9 +392,7 @@ header {
 
 .discount-banner img {
     width: 100%;
-    /* Зображення займає всю ширину банера */
     height: auto;
-    /* Зберігаємо пропорції */
     margin-top: -9px;
     margin-bottom: 15px;
 }
@@ -413,13 +402,9 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Центрує текстові параграфи всередині цієї обгортки */
     justify-content: center;
-    /* Центрує їх по вертикалі всередині обгортки, якщо є вільне місце */
     width: 100%;
-    /* Щоб контент займав всю ширину батьківського .discount-banner */
     text-transform: uppercase;
-    /* Перетворюємо весь текст на великі літери */
     font-size: 0.8rem;
     box-sizing: border-box;
     font-weight: bold;
@@ -427,10 +412,10 @@ header {
 }
 
 .discount-content .line {
-    width: 130%; /* Ширина лінії */
+    width: 130%;
     height: 0.5px;
     background-color:rgba(0, 0, 0, 0.5);
-    margin: 4px 0px 8px 0px; /* Відступи навколо лінії */
+    margin: 4px 0px 8px 0px; 
     transform: translateX(-10%);
 }
 
@@ -444,16 +429,12 @@ aside {
     flex-basis: var(--aside-width);
     background-color: var(--item-bg-color);
     display: flex;
-    /* Використовуємо flexbox для компонування вмісту сайдбару */
     flex-direction: column;
-    /* Елементи розташовані в стовпець */
     border-left: 1px solid var(--border-color);
     flex-shrink: 0;
     position: sticky;
     top: 0;
-    /* Прилипає до верху вікна перегляду */
     height: 100vh;
-    /* Займає всю висоту екрану */
 }
 
 .order.summary {
@@ -475,13 +456,11 @@ aside {
 
 .order.count {
     display: inline-flex;
-    /* Щоб padding застосовувався правильно */
     align-items: center;
     justify-content: center;
     background-color: var(--orange-color);
     color: var(--text-color);
     border-radius: 50%;
-    /* Кругла форма */
     padding: 4px 8px;
     font-size: 0.8rem;
 }
@@ -490,7 +469,6 @@ aside {
     background: none;
     border: none;
     color: var(--light-gray-text);
-    /* Світло-сірий текст */
     cursor: pointer;
     font-size: 0.5rem;
 }
@@ -500,21 +478,15 @@ aside {
     list-style: none;
     margin: 0;
     flex-grow: 1;
-    /* Дозволяє списку займати весь доступний простір */
     overflow-y: auto;
-    /* Якщо список буде великим, з'явиться скрол */
 }
 
 .order.item {
     border-bottom: 1px solid var(--border-color);
     display: flex;
-    /* Flexbox для компонування елементів всередині товару */
     align-items: flex-start;
-    /* Вирівнювання елементів по верху */
     gap: 15px;
-    /* Відступ між елементами */
     position: relative;
-    /* Для позиціонування зображення піци */
     overflow: hidden;
 }
 
@@ -525,7 +497,6 @@ aside {
     flex-direction: column;
     gap: 10px;
     flex-grow: 1;
-    /* Дозволяє деталям займати доступний простір */
 }
 
 .item.name {
@@ -540,13 +511,11 @@ aside {
     align-items: center;
     gap: 10px;
     color: var(--icon-color);
-    /* Сірий колір для тексту атрибутів */
     font-size: 0.8rem;
 }
 
 .item.attributes img {
     height: 12px;
-    /* Розмір іконки */
     width: 12px;
     vertical-align: middle;
 }
@@ -580,12 +549,10 @@ aside {
 
 .btn.quantity.plus {
     background-color: var(--green-button-color);
-    /* Зелений для плюс */
 }
 
 .btn.quantity.minus {
     background-color: var(--red-button-color);
-    /* Червоний для мінус */
 }
 
 .btn.quantity:hover {
@@ -600,7 +567,6 @@ aside {
 
 .btn.remove-item {
     background-color: var(--item-bg-color);
-    /* Сірий для х */
     color: var(--orange-color);
     border: none;
     border-radius: 50%;
@@ -623,20 +589,13 @@ aside {
 
 .item.image {
     width: 80px;
-    /* Розмір зображення піци */
     height: 80px;
     border-radius: 50%;
-    /* Кругла форма */
     object-fit: cover;
-    /* Обрізає зображення, щоб воно помістилося */
     position: absolute;
-    /* Абсолютне позиціонування */
     right: -40px;
-    /* З правого краю */
     top: 12%;
-    /* По центру по вертикалі */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    /* Тінь */
 }
 
 
@@ -645,39 +604,27 @@ aside {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    /* Елементи в стовпець */
     align-items: center;
-    /* Центрування по горизонталі */
     padding: 18px 10px;
-    /* 15px */
     border-top: 1px solid var(--border-color);
-    /* 1px */
     background-color: white;
-    /* Фон як у aside */
     gap: 15px;
-    /* 15px відступу між елементами */
-    /* Важливо: flex-shrink: 0; та інші flex-властивості для запобігання стисненню */
     flex-shrink: 0;
 }
 
 .order.total p {
     font-size: 1rem;
-    /* 18px */
     color: var(--dark-text-color);
     margin: 0;
-    /* Видаляємо стандартні відступи параграфа */
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* Розтягує елементи на всю ширину */
     width: 100%;
-    /* Займає всю доступну ширину */
 }
 
 .order.total .total-amount {
     font-size: 1rem;
-    /* 24px */
     font-weight: bold;
     color: var(--dark-text-color);
 }
@@ -688,21 +635,15 @@ aside {
     color: var(--text-color);
     border: none;
     border-radius: 5px;
-    /* 5px */
     padding: 8px 10px;
-    /* 15px 20px */
     width: 90%;
-    /* Кнопка займає всю доступну ширину */
     cursor: pointer;
     font-size: 1.1rem;
-    /* 18px */
     text-align: center;
     transition: background-color 0.3s ease;
     box-sizing: border-box;
-    /* Важливо для width: 100% з padding */
 }
 
 .btn.order:hover {
     background-color: #e68a18;
-    /* Трохи темніший оранжевий при наведенні */
 }
