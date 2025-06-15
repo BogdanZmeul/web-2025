@@ -125,6 +125,10 @@ header {
     color: var(--light-gray-text);
 }
 
+.working-hours{
+    font-size: calc(8px + 4 * (100vw / 1920));
+}
+
 .login-button {
     background-color: var(--orange-color);
     color: var(--text-color);
@@ -140,7 +144,7 @@ header {
 }
 
 .login-button:hover {
-    background-color: darken(var(--orange-color), 1%);
+    background-color: #996300;
 }
 
 .header-nav {
@@ -241,7 +245,7 @@ header {
 
 /* Pizza Cards Styles */
 .pizza-container {
-    padding: 20px;
+    padding: 20px 80px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
@@ -405,7 +409,7 @@ header {
 .discount-banner img {
     width: 100%;
     height: auto;
-    margin-top: -9px;
+    margin-top: -7px;
     margin-bottom: 15px;
 }
 
@@ -466,6 +470,7 @@ aside.active {
     font-size: calc(15px + 4 * (100vw / 1920));
     color: var(--dark-text-color);
     margin: 0;
+    gap: 5px;
     display: flex;
     align-items: center;
 }
@@ -484,7 +489,7 @@ aside.active {
 .btn.clear-order {
     background: none;
     border: none;
-    color: var(--light-gray-text);
+    color: #b0b0b0;
     cursor: pointer;
     font-size: 0.5rem;
 }
@@ -656,9 +661,14 @@ aside.active {
     background-color: #e68a18;
 }
 
+@media (max-width: 1200px) {
+    .pizza-container {
+        padding: 20px;
+    }
+}
+
 @media (max-width: 767px) {
 
-    .contact-info .working-hours,
     .contact-info .delivery-info,
     .contact-info .phone-number,
     .header-nav.links li a,
@@ -668,6 +678,10 @@ aside.active {
     .btn.remove-item,
     .order.total p {
         font-size: calc(12px + (4 + 4 * 0.7) * ((100vw - 320px) / 1920));
+    }
+    
+    .contact-info .working-hours{
+        font-size: calc(8px + (4 + 4 * 0.7) * ((100vw - 320px) / 1920));
     }
 
     .btn.order {
