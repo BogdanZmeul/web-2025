@@ -125,7 +125,7 @@ header {
     color: var(--light-gray-text);
 }
 
-.working-hours{
+.working-hours {
     font-size: calc(8px + 4 * (100vw / 1920));
 }
 
@@ -559,21 +559,24 @@ aside.active {
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    font-size: calc(12px + 4 * (100vw / 1920));
+    font-size: calc(16px + 4 * (100vw / 1920));
     font-weight: bold;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.2s ease;
+    box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.1) inset;
 }
 
 .btn.quantity.plus {
     background-color: var(--green-button-color);
+    outline: 1px solid green;
 }
 
 .btn.quantity.minus {
     background-color: var(--red-button-color);
+    outline: 1px solid rgb(185, 11, 11);
 }
 
 .btn.quantity:hover {
@@ -602,6 +605,8 @@ aside.active {
     align-items: center;
     justify-content: center;
     transition: background-color 0.2s ease;
+    outline: 1px solid var(--gray-button-color);
+    box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.1) inset;
 }
 
 .btn.remove-item:hover {
@@ -674,13 +679,16 @@ aside.active {
     .header-nav.links li a,
     .login-button,
     .item.name,
-    .btn.quantity,
     .btn.remove-item,
     .order.total p {
         font-size: calc(12px + (4 + 4 * 0.7) * ((100vw - 320px) / 1920));
     }
-    
-    .contact-info .working-hours{
+
+    .btn.quantity {
+        font-size: calc(16px + (4 + 4 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .contact-info .working-hours {
         font-size: calc(8px + (4 + 4 * 0.7) * ((100vw - 320px) / 1920));
     }
 
